@@ -20,13 +20,18 @@ body {
   min-height: 100%;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  background:  url("../images/ui/background.jpg") lightgray;
+  background:  url("../images/ui/background.jpg");
+  background-position-y: 25%;
 }
 
 /*********** HEADER ******************/
 
 header, section {
   margin: 0 auto;
+}
+
+header {
+  background:  url("../images/ui/background.jpg");
 }
 
 .row {
@@ -39,6 +44,7 @@ header, section {
 }
 
 .liens ul {
+  list-style: none;
   display: flex;
   align-content: flex-end;
   justify-content: right;
@@ -46,7 +52,19 @@ header, section {
 }
 
 .liens ul li a {
-  padding: 5px 7px 3px 7px;
+  padding: 5px 8px 3px 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.liens ul li {
+  transition: all 0.3s ease;
+}
+
+.liens ul li:hover a {
+border-bottom: 2px solid white;
+padding-bottom: 4px;
 }
 
 /************ PARTIE MAIN  ******************/
@@ -61,6 +79,10 @@ header, section {
 
 section {
   background-color:  rgb(240, 240, 240);
+}
+
+section .col {
+  padding: 0;
 }
 
 .carousel-item img {
@@ -126,8 +148,11 @@ section {
 footer {
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 21px;
+  padding-bottom: 27px;
+  background-color: white;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #reseaux a {
