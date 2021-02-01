@@ -120,6 +120,7 @@ section .col {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 12px;
+  color:  rgb(82, 82, 82);
 }
 
 .card-body {
@@ -131,7 +132,10 @@ section .col {
 
 .card-body p  {
 font-size: 14px;
+color: rgb(150, 150, 150);
+font-weight: bold;
 }
+
 
 .card-text:last-child {
   margin-top: 73px;
@@ -145,18 +149,24 @@ font-size: 14px;
   background-color: #d66a6a;
 }
 
-/* .card-text:last-child span {
-  padding-right: 8px;
-  padding-top: 13px;
-} */
-
-#prix {
-  position: absolute;
+#prix-standard, #prix-promo {
+font-weight: bold;
+font-size: 18px;
 }
 
-/* #prix-reduit {
-  margin-left: 21px;
-} */
+#prix-standard, #prix-barre {
+  color:  rgb(115, 115, 115);
+}
+
+#prix-barre  {
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+#prix-promo {
+ color: rgb(189, 189, 189);
+}
 
 /********************* FOOTER ****************************/
 
@@ -191,7 +201,7 @@ footer {
   text-decoration: underline;
   color: black;
   padding-right: 10px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 #copyright {
