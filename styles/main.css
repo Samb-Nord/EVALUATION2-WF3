@@ -20,8 +20,7 @@ body {
   min-height: 100%;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  background:  url("../images/ui/background.jpg");
-  background-position-y: 25%;
+  background:  url("../images/ui/background.jpg") no-repeat;
 }
 
 /*********** HEADER ******************/
@@ -37,6 +36,10 @@ header {
 .row {
   margin-right: 0;
   margin-left: 0;
+}
+
+.logo img {
+  height: 150px;
 }
 
 .liens {
@@ -71,7 +74,8 @@ padding-bottom: 4px;
 
 .container {
   width: 70%;
-  margin: 0 auto;
+  margin-top: 15px;
+  /* margin: 0 auto; */
   padding: 0;
   align-content: center;
   align-items: center;
@@ -99,8 +103,6 @@ section .col {
   width: 100%;
 }
 
- 
-
 #image-produit {
   padding: 0;
 }
@@ -116,38 +118,50 @@ section .col {
 
 .card-title {
   text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
 .card-body {
   position: relative;
   vertical-align: middle;
   height: 203px;
+  margin-left: 10px;
 }
 
-.infos {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 165px;
-  left: 426px;
-  /* right: 14px; */
+.card-body p  {
+font-size: 14px;
 }
 
-.infos a {
-  padding: 7px 22px 7px 17px;
+.card-text:last-child {
+  margin-top: 73px;
+  width: 100%;
+  text-align: right;
+  float: right;
+}
+
+.card-text:last-child a {
+  padding-left: 7px 22px 7px 17px;
   background-color: #d66a6a;
 }
 
-.infos p {
-  padding-top: 11px;
-  margin-right: 13px;
+/* .card-text:last-child span {
+  padding-right: 8px;
+  padding-top: 13px;
+} */
+
+#prix {
+  position: absolute;
 }
+
+/* #prix-reduit {
+  margin-left: 21px;
+} */
 
 /********************* FOOTER ****************************/
 
 footer {
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-around;
   padding-top: 21px;
   padding-bottom: 27px;
   background-color: white;
@@ -168,13 +182,16 @@ footer {
 
 #footer-links ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
+  padding-top: 7px;
 }
 
 #footer-links ul li a {
   text-decoration: underline;
   color: black;
+  padding-right: 10px;
+  font-size: 15px;
 }
 
 #copyright {
