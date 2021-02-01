@@ -21,10 +21,26 @@ body {
   font-family: sans-serif;
 }
 
+
+
+/*********** HEADER ******************/
+header {
+ margin: 0 auto;
+}
+
+.liens {
+  top: 125px;
+}
+
 .liens ul {
   display: flex;
-  justify-content: space-around;
   align-content: flex-end;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.liens ul li a {
+  padding: 5px 7px 3px 7px;
 }
 
 /************ PARTIE MAIN  ******************/
@@ -34,9 +50,9 @@ body {
   margin: 0 auto;
 }
 
-#slider div img {
+.carousel-item img {
   width: 100%;
-  height: 30rem;
+  height: 27rem;
 }
 
 #image-produit img {
@@ -101,10 +117,6 @@ justify-content: space-between;
 #footer-links ul li a {
   text-decoration: underline;
 }
-
-
-
-
 
 
 
