@@ -20,17 +20,18 @@ body {
   min-height: 100%;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  background:  url("../images/ui/background.jpg") no-repeat;
+  background: url("../images/ui/background.jpg") no-repeat;
 }
 
-/*********** HEADER ******************/
-
+/*********** Général **************/
 header, section {
   margin: 0 auto;
 }
+/*********** HEADER ******************/
+
 
 header {
-  background:  url("../images/ui/background.jpg");
+  background: url("../images/ui/background.jpg");
 }
 
 .row {
@@ -66,8 +67,8 @@ header {
 }
 
 .liens ul li:hover a {
-border-bottom: 2px solid white;
-padding-bottom: 4px;
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
 }
 
 /************ PARTIE MAIN  ******************/
@@ -82,7 +83,7 @@ padding-bottom: 4px;
 }
 
 section {
-  background-color:  rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 section .col {
@@ -99,8 +100,12 @@ section .col {
 }
 
 #titre-produits {
+  text-transform: uppercase;
   background-color: white;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
   width: 100%;
+  font-size: 21px;
 }
 
 #image-produit {
@@ -120,7 +125,7 @@ section .col {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 12px;
-  color:  rgb(82, 82, 82);
+  color: rgb(82, 82, 82);
 }
 
 .card-body {
@@ -130,12 +135,11 @@ section .col {
   margin-left: 10px;
 }
 
-.card-body p  {
-font-size: 14px;
-color: rgb(150, 150, 150);
-font-weight: bold;
+.card-body p {
+  font-size: 14px;
+  color: rgb(82, 82, 82);
+  font-weight: bold;
 }
-
 
 .card-text:last-child {
   margin-top: 73px;
@@ -147,25 +151,31 @@ font-weight: bold;
 .card-text:last-child a {
   padding-left: 7px 22px 7px 17px;
   background-color: #d66a6a;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.card-text:last-child a:hover {
+  background:linear-gradient(#e66465,rgb(217, 217, 217));
 }
 
 #prix-standard, #prix-promo {
-font-weight: bold;
-font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #prix-standard, #prix-barre {
-  color:  rgb(115, 115, 115);
+  color: rgb(115, 115, 115);
 }
 
-#prix-barre  {
+#prix-barre {
   font-weight: bold;
   font-size: 14px;
   text-decoration: line-through;
 }
 
 #prix-promo {
- color: rgb(189, 189, 189);
+  color: rgb(189, 189, 189);
 }
 
 /********************* FOOTER ****************************/
@@ -177,12 +187,22 @@ footer {
   background-color: white;
   padding-left: 0;
   padding-right: 0;
+  border: 1px solid white;
 }
 
 #reseaux a {
   padding: 16px 7px 8px 11px;
   border-radius: 33px;
   background-color: #d66a6a;
+  transition: all 0.3s ease;
+}
+
+#reseaux a:hover {
+  background-color: white;
+}
+
+#reseaux a:hover i {
+  color:  #d66a6a;
 }
 
 #reseaux a i {
@@ -208,34 +228,94 @@ footer {
   color: #d66a6a;
 }
 
-/* =========================================================================
- * MY CUSTOM STYLE
- * ========================================================================= */
-
-.example-collection {
-  margin: auto;
-  align-items: center;
-}
-
-.example-collection>.collection__item:not(:first-child) {
-  margin-top: var(--offset--medium);
-}
-
-.brand-logo {
-  width: 128px;
-}
-
-.page-title {
-  color: var(--color--dark-grey);
-}
-
-.font-awesome-example {
-  color: var(--color--black);
-}
-
 /************************* RESPPONSIVE ***********************
 ****************************************************************/
 
-@media screen and (max-width : 576px) {
-
+@media screen and (max-width: 576px) {
+  body {
+    background-image: none;
+  }
+  .menu {
+    position: relative;
+    background-image: url("../images/ui/background.jpg");
+    height: 140px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .logo {
+    position: absolute;
+    top: 23px;
+    left: 125px;
+  }
+  .logo img {
+    height: 93px;
+  }
+  .liens {
+    top: 52px;
+    left: 14px;
+  }
+  .liens ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .liens ul li a {
+    font-size: 10px;
+    padding-right: 7px;
+  }
+  .container {
+    margin-top: 0;
+  }
+  .carousel-item img {
+    height: 13rem;
+  }
+  #titre-produits {
+    font-size: 15px;
+  }
+  .card-body {
+    height: 107px;
+  }
+  .card-body p {
+    margin-top: 1px !important;
+    font-weight: 100;
+    font-size: 13px;
+  }
+  .card-text:nth-child(0) {
+    margin-top: 5px;
+  }
+  .card-text:last-child {
+    margin-top: 10px;
+  }
+  #prix-standard, #prix-promo {
+    margin-right: 0 !important;
+    font-size: 12px;
+  }
+  #prix-barre {
+    font-size: 10px;
+  }
+  .btn {
+    padding: 5px 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  footer {
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+  }
+  #reseaux, #footer-links, #copyright {
+    text-align: center !important;
+    margin-top: 5px;
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+  #reseaux a {
+    padding: 5px 5px;
+  }
+  #reseaux a i {
+    font-size: 14px;
+  }
+  #copyright {
+    font-size: 14px;
+  }
 }
